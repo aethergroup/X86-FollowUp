@@ -1,0 +1,120 @@
+---
+import '../styles/global.css';
+import Instagram from '../assets/instagram.astro';
+import Tiktok from '../assets/tiktok.astro';
+import LegalModals from './LegalModals.astro';
+
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="bg-[#102c26] text-white mt-auto" role="contentinfo">
+    <!-- Main Footer Content -->
+    <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <div class="text-center md:text-left">
+                <h3 class="text-xl font-bold mb-4 text-green-400">Follow Up</h3>
+                <p class="text-gray-300 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
+                    Tu solución integral para el seguimiento de clientes y gestión de relaciones comerciales.
+                </p>
+            </div>
+            
+            <div class="text-center">
+                <h4 class="text-lg font-semibold mb-4 text-green-400">Legal</h4>
+                <ul class="space-y-2 text-sm" role="list">
+                    <li>
+                        <button 
+                            data-modal-type="privacy"
+                            class="legal-modal-trigger text-gray-300 hover:text-green-400 transition-colors duration-200 text-center w-full"
+                            aria-label="Leer políticas de privacidad">
+                            Políticas de Privacidad
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            data-modal-type="terms"
+                            class="legal-modal-trigger text-gray-300 hover:text-green-400 transition-colors duration-200 text-center w-full"
+                            aria-label="Leer términos y condiciones">
+                            Términos y Condiciones
+                        </button>
+                    </li>
+                    <li>
+                        <button 
+                            data-modal-type="cookies"
+                            class="legal-modal-trigger text-gray-300 hover:text-green-400 transition-colors duration-200 text-center w-full"
+                            aria-label="Leer política de cookies">
+                            Uso de Cookies
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="text-center md:text-right">
+                <h4 class="text-lg font-semibold mb-4 text-green-400">Síguenos</h4>
+                <div class="flex justify-center md:justify-end space-x-4" role="list">
+                    <a href="https://instagram.com/aether.x86" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-110" 
+                       aria-label="Síguenos en Instagram (abre en nueva ventana)" role="listitem">
+                        <Instagram class="w-5 h-5 text-white" />
+                    </a>
+                    <a href="https://tiktok.com/@aether.x86" target="_blank" rel="noopener noreferrer" 
+                       class="w-10 h-10 bg-green-600 hover:bg-green-700 rounded-full flex items-center justify-center transition-all duration-200 transform hover:scale-110" 
+                       aria-label="Síguenos en TikTok (abre en nueva ventana)" role="listitem">
+                        <Tiktok class="w-5 h-5 text-white" />
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Bottom Bar -->
+    <div class="border-t border-green-800">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-center items-center text-sm text-gray-400">
+                <p>&copy; {currentYear} Follow Up. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<LegalModals client:load />
+
+<style>
+    /* Responsive adjustments for mobile-first approach */
+    @media (max-width: 767px) {
+        footer {
+            font-size: 0.9rem;
+        }
+        
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+    
+    /* Enhanced hover effects */
+    footer a {
+        position: relative;
+        transition: all 0.3s ease;
+    }
+    
+    footer a::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #4ade80;
+        transition: width 0.3s ease;
+    }
+    
+    footer a:hover::after {
+        width: 100%;
+    }
+    
+    /* Smooth transitions for all interactive elements */
+    footer * {
+        transition: all 0.2s ease;
+    }
+</style>

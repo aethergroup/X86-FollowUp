@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+:root {
+	--font-sans: "Unbounded", system-ui, sans-serif;
+	--font-narrow: "Spectral", system-ui, sans-serif;
+}

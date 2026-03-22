@@ -1,23 +1,91 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
+		<title>Follow Up - Sistema de suscripciones</title>
 		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="description" content="Sistema de seguimiento de proyectos X86 con interfaz moderna y accesible" />
 		<link rel="icon" href="/favicon.ico" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
 	</head>
 	<body>
 		<slot />
 	</body>
 </html>
 
-<style>
+<style is:global>
+	@font-face {
+		font-family: 'Unbounded';
+		src: url("/fonts/Unbounded-Regular.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Unbounded';
+		src: url("/fonts/Unbounded-Bold.ttf") format("truetype");
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Unbounded';
+		src: url("/fonts/Unbounded-SemiBold.ttf") format("truetype");
+		font-weight: 600;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Unbounded';
+		src: url("/fonts/Unbounded-Black.ttf") format("truetype");
+		font-weight: 900;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Spectral';
+		src: url("/fonts/Spectral-Regular.ttf") format("truetype");
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Spectral';
+		src: url("/fonts/Spectral-Bold.ttf") format("truetype");
+		font-weight: bold;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Spectral';
+		src: url("/fonts/Spectral-Medium.ttf") format("truetype");
+		font-weight: 500;
+		font-style: normal;
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Spectral';
+		src: url("/fonts/Spectral-Light.ttf") format("truetype");
+		font-weight: 300;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	html,
 	body {
+		background-color: #f7e7ce;
 		margin: 0;
 		width: 100%;
 		height: 100%;
+		line-height: 1.6;
 	}
 </style>

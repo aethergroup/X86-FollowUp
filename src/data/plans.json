@@ -1,0 +1,61 @@
+{
+  "plans": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price": "Gratis",
+      "period": "",
+      "description": "Perfecto para gimnasios pequeños que están empezando a digitalizarse",
+      "features": [
+        "Hasta 50 miembros",
+        "Gestión de suscripciones básica",
+        "Pagos digitales",
+        "Recordatorios automáticos",
+        "Reportes básicos",
+        "Soporte por email"
+      ],
+      "popular": false,
+      "cta": "Comenzar ahora"
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": "$100.000",
+      "period": "/mes",
+      "description": "Ideal para gimnasios en crecimiento con más necesidades",
+      "features": [
+        "Hasta 200 miembros",
+        "Gestión avanzada de suscripciones",
+        "Pagos digitales sin límite",
+        "Recordatorios personalizados",
+        "Reportes avanzados y analytics",
+        "Integración con WhatsApp Business",
+        "Soporte prioritario 24/7",
+        "API access"
+      ],
+      "popular": true,
+      "cta": "Elegir Premium"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "price": "Personalizado",
+      "period": "",
+      "description": "Solución a medida para grandes cadenas de gimnasios",
+      "features": [
+        "Miembros ilimitados",
+        "Gestión multi-sucursal",
+        "Pagos digitales sin límite",
+        "Sistema de recordatorios avanzado",
+        "Reportes personalizados y BI",
+        "Integración completa con WhatsApp Business",
+        "API dedicada y webhooks",
+        "Soporte dedicado con gestor de cuenta",
+        " capacitación personalizada",
+        "SLA garantizado"
+      ],
+      "popular": false,
+      "cta": "Contactar ventas"
+    }
+  ]
+}
