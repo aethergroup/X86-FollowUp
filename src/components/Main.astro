@@ -1,0 +1,192 @@
+---
+import '../styles/global.css';
+---
+
+<main class="min-h-screen" role="main">
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20 px-4" aria-labelledby="hero-title">
+        <div class="container mx-auto text-center">
+            <h1 id="hero-title" class="text-3xl md:text-5xl font-bold font-sans text-[#102c26] mb-4 md:mb-6">
+                Gestiona tu gimnasio de forma digital
+            </h1>
+            <p class="text-lg md:text-xl font-narrow text-gray-700 mb-6 md:mb-8 max-w-2xl mx-auto">
+                Sistema completo para gestionar suscripciones visualmente y digitalizar pagos. 
+                Sin efectivo, sin complicaciones.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors" aria-label="Solicitar demostración del producto">
+                    <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20me%20gustaria%20solicitar%20una%20demo%20del%20producto%20FollowUp`} target="_blank">Solicitar demo</a>
+                </button>
+                <button class="border-2 border-[#102c26] text-[#102c26] hover:bg-[#102c26] hover:text-white px-6 py-3 rounded-lg font-medium transition-colors" aria-label="Ver características del producto">
+                    <a href="#features">Ver características</a>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 md:py-16 px-4 bg-white" aria-labelledby="features-title">
+        <div class="container mx-auto">
+            <h2 class="text-2xl md:text-3xl font-bold font-sans text-[#102c26] text-center mb-8 md:mb-12">
+                Características principales
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Visualización de suscripciones</h3>
+                    <p class="font-narrow text-gray-600">
+                        Panel intuitivo para ver todas las suscripciones activas, vencidas y en espera en tiempo real.
+                    </p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Pagos digitales</h3>
+                    <p class="font-narrow text-gray-600">
+                        Tus clientes pagan desde su celular. Tarjetas, transferencias y billeteras digitales.
+                    </p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Recordatorios automáticos</h3>
+                    <p class="font-narrow text-gray-600">
+                        Notificaciones automáticas de vencimiento y recordatorios de pago por WhatsApp y SMS.
+                    </p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Gestión de miembros</h3>
+                    <p class="font-narrow text-gray-600">
+                        Base de datos completa con historial de pagos, asistencia y información de contacto.
+                    </p>
+                </div>
+
+                <!-- Feature 5 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Reportes en tiempo real</h3>
+                    <p class="font-narrow text-gray-600">
+                        Estadísticas detalladas de ingresos, crecimiento y retención de clientes.
+                    </p>
+                </div>
+
+                <!-- Feature 6 -->
+                <div class="text-center p-6" role="article">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4" aria-hidden="true">
+                        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold font-sans text-[#102c26] mb-3">Seguridad garantizada</h3>
+                    <p class="font-narrow text-gray-600">
+                        Encriptación de datos y cumplimiento de normativas de protección financiera.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="py-12 md:py-16 px-4" aria-labelledby="benefits-title">
+        <div class="container mx-auto">
+            <h2 id="benefits-title" class="text-2xl md:text-3xl font-bold font-sans text-[#102c26] text-center mb-8 md:mb-12">
+                Beneficios para tu gimnasio
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold font-sans text-[#102c26] mb-2">Reduce la morosidad</h3>
+                        <p class="font-narrow text-gray-600">Automatización de recordatorios y pagos recurrentes para mejorar el flujo de caja.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold font-sans text-[#102c26] mb-2">Ahorra tiempo administrativo</h3>
+                        <p class="font-narrow text-gray-600">Elimina el trabajo manual de cobranza y seguimiento de pagos.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold font-sans text-[#102c26] mb-2">Mejora la experiencia cliente</h3>
+                        <p class="font-narrow text-gray-600">Tus clientes pagan cómodamente desde su celular cuando quieran.</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-4">
+                    <div class="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                        <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-semibold font-sans text-[#102c26] mb-2">Control total de tu negocio</h3>
+                        <p class="font-narrow text-gray-600">Información detallada y actualizada sobre el estado financiero de tu gimnasio.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section id="contact" class="py-12 md:py-16 px-4 bg-[#102c26] text-white" aria-labelledby="cta-title">
+        <div class="container mx-auto text-center">
+            <h2 id="cta-title" class="text-2xl md:text-3xl font-bold font-sans mb-4 md:mb-6">
+                ¿Listo para digitalizar tu gimnasio?
+            </h2>
+            <p class="text-lg md:text-xl font-narrow mb-6 md:mb-8 max-w-2xl mx-auto opacity-90">
+                Únete a los gimnasios que ya están ahorrando tiempo y aumentando sus ingresos con Follow Up.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-medium transition-colors" aria-label="Solicitar demo gratuita">
+                    <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20me%20gustaria%20solicitar%20una%20demo%20del%20producto%20FollowUp`} target="_blank">Solicitar demo gratuita</a>
+                </button>
+                <button class="border-2 border-white text-white hover:bg-white hover:text-[#102c26] px-6 py-3 rounded-lg font-medium transition-colors" aria-label="Ver precios">
+                    <a href="/plans">Ver precios</a>
+                </button>
+            </div>
+        </div>
+    </section>
+</main>

@@ -1,0 +1,71 @@
+{
+  "plans": [
+    {
+      "id": "starter",
+      "name": "Starter",
+      "price": "Gratis",
+      "period": "",
+      "description": "Comienza sin costo y crece a tu ritmo",
+      "features": [
+        "Hasta 50 miembros",
+        "Pagos digitales (5% comisión)",
+        "Recordatorios básicos",
+        "Reportes simples",
+        "Soporte por email 48h",
+        "Web app con instalación PWA",
+        "Acceso directo desde el escritorio del celular"
+      ],
+      "limitations": [
+        "Límite de 50 transacciones/mes",
+        "Reportes con retraso de 24h",
+        "Sin integraciones avanzadas"
+      ],
+      "popular": false,
+      "cta": "Comenzar gratis"
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "price": "$200.000",
+      "period": "/mes",
+      "description": "Acelera tu crecimiento con herramientas profesionales",
+      "features": [
+        "Hasta 200 miembros",
+        "Pagos digitales (2% comisión)",
+        "Recordatorios inteligentes con IA",
+        "Reportes en tiempo real",
+        "Integración con WhatsApp Business",
+        "Soporte prioritario 24/7",
+        "API access básica",
+        "Web app personalizada con PWA avanzada",
+        "Análisis de retención de miembros",
+        "Gestión de clases y horarios"
+      ],
+      "popular": true,
+      "cta": "Elegir Premium - 7 días gratis"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise",
+      "price": "Personalizado",
+      "period": "",
+      "description": "Potencia máxima para cadenas que dominan el mercado",
+      "features": [
+        "Miembros ilimitados",
+        "Pagos digitales (0.5% comisión)",
+        "Gestión multi-sucursal centralizada",
+        "Recordatorios predictivos con IA",
+        "Dashboard ejecutivo personalizado",
+        "Integración con todos los canales",
+        "API dedicada sin límites",
+        "Soporte dedicado con manager",
+        "Capacitación presencial o digital",
+        "SLA 99.9% garantizado",
+        "Migración de datos gratuita",
+        "Consultoría estratégica trimestral"
+      ],
+      "popular": false,
+      "cta": "Solicitar demo personalizada"
+    }
+  ]
+}

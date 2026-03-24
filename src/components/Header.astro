@@ -1,0 +1,73 @@
+---
+import '../styles/global.css';
+---
+
+<header class="bg-[#102c26] text-white shadow-lg rounded-b-lg" role="banner">
+    <nav class="container mx-auto px-6 py-5">
+        <div class="flex justify-between items-center">
+            <!-- Brand -->
+            <div class="flex items-center space-x-3">
+                <span class="text-xl font-bold" aria-label="FollowUp - Sistema de gestión"><a href="/">Follow Up</a></span>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <ul class="hidden md:flex items-center space-x-6 text-sm font-medium" role="menubar">
+                <li><a href="./#features" class="hover:text-blue-400 transition-colors" role="menuitem">Características</a></li>
+                <li><a href="/plans" class="hover:text-blue-400 transition-colors" role="menuitem">Precios</a></li>
+                <li><a href="./#contact" class="hover:text-blue-400 transition-colors" role="menuitem">Contacto</a></li>
+            </ul>
+
+            <!-- CTA Button -->
+            <button class="hidden md:block bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors" aria-label="Solicitar una demostración">
+                <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20me%20gustaria%20solicitar%20una%20demo%20del%20producto%20FollowUp`} target="_blank">Solicitar una demo</a>
+            </button>
+
+            <!-- Mobile Menu Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none" aria-label="Abrir menú móvil" aria-expanded="false">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation (Hidden by default) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-green-800">
+            <ul class="space-y-3 text-sm font-medium" role="menu">
+                <li><a href="./#features" class="block hover:text-blue-400 transition-colors" role="menuitem">Características</a></li>
+                <li><a href="/plans" class="block hover:text-blue-400 transition-colors" role="menuitem">Precios</a></li>
+                <li><a href="./#contact" class="block hover:text-blue-400 transition-colors" role="menuitem">Contacto</a></li>
+                <li>
+                    <button class="w-full bg-green-600 hover:bg-green-700 px-4 py-2 rounded-lg text-sm font-medium transition-colors mt-4" aria-label="Solicitar una demostración">
+                        <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20me%20gustaria%20solicitar%20una%20demo%20del%20producto%20FollowUp`} target="_blank">Solicitar una demo</a>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        if (mobileMenuButton && mobileMenu) {
+            const toggleMenu = () => {
+                mobileMenu.classList.toggle('hidden');
+                mobileMenuButton.setAttribute('aria-expanded', mobileMenu.classList.contains('hidden') ? 'false' : 'true');
+            };
+            
+            mobileMenuButton.addEventListener('click', toggleMenu);
+
+            const menuLinks = mobileMenu.querySelectorAll('a, button');
+            menuLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    mobileMenuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+        }
+    });
+</script>
