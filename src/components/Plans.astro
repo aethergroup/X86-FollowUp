@@ -57,11 +57,11 @@ import plansData from "../data/plans.json";
                             : 'border-2 border-[#102c26] text-[#102c26] hover:bg-[#102c26] hover:text-white'
                     }`} aria-label={`${plan.cta} - Plan ${plan.name}`}>
                         {plan.id === 'enterprise' ? (
-                            <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20estoy%20interesado%20en%20el%20plan%20Enterprise`} target="_blank">
+                            <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20estoy%20interesado%20en%20el%20plan%20Enterprise%20de%20FollowUp`} target="_blank">
                                 {plan.cta}
                             </a>
                         ) : (
-                            <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20quiero%20contratar%20el%20plan%20${plan.name}`} target="_blank">
+                            <a href={`https://wa.me/${import.meta.env.PHONE_NUMBER}?text=Hola%2C%20quiero%20contratar%20el%20plan%20${plan.name}%20de%20FollowUp`} target="_blank">
                                 {plan.cta}
                             </a>
                         )}
